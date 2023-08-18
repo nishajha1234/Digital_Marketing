@@ -1,0 +1,396 @@
+.portfolio_App {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #f5f8fa;
+  }
+  
+  .portfolio_background {
+    background-image: url("https://cdn.studentville.it/zpj0dyuyk6d-UHy2ZpS30hzy_0w=/960x640/smart/https://www.studentville.it/app/uploads/2016/10/e84401ad27c4cfb9815776eb9432ff17.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 580px;
+    width: 100vw;
+  }
+  
+  .portfolio_navbar {
+    background-color: rgba(22, 22, 118, 0.4);
+    padding: 15px;
+    color: white;
+    display: flex;
+  }
+  
+  .portfolio_navbar i {
+    font-size: 40px;
+    margin-right: 8px;
+  }
+  
+  .portfolio_navbar b {
+    font-size: 35px;
+  }
+  
+  .portfolio_nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: 80px;
+    margin-top: 16px;
+  }
+  
+  .portfolio_nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  
+  .portfolio_nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .portfolio_main_heading {
+    color: white;
+    background-color: rgb(0, 0, 30, 0.3);
+    background-size: cover;
+    padding: 88.8px;
+  }
+  
+  .portfolio_main_heading h1 {
+    font-size: 80px;
+    margin: auto;
+    margin-top: -22px;
+  }
+  
+  .portfolio_main_heading p {
+    font-size: 33px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    text-align: justify;
+  }
+  
+  .portfolio_main_heading a {
+    border: solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .portfolio_heading {
+    background-color: #045ba7;
+    padding: 20px;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .portfolio_navbar1 {
+    display: flex;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-evenly;
+  }
+  
+  .portfolio_navbar1 a {
+    text-decoration: none;
+    color: #b7def0;
+    padding: 10px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15%;
+    border-bottom: 7px solid #045ba7;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .portfolio_navbar1 a:hover {
+    border-bottom: 7px solid rgb(73, 153, 223);
+  }
+  
+  .portfolio_navbar1 a.active {
+    border-bottom: 7px solid rgb(73, 153, 223);
+    color: #fff;
+  }
+  
+  .portfolio_content {
+    display: none;
+    margin-bottom: 100px;
+    box-shadow: 0 30px 50px rgb(0, 0, 0, 0.2);
+    background-color: rgb(252, 252, 252);
+  }
+  
+  .portfolio_content.active {
+    display: block;
+  }
+  
+  .portfolio_container {
+    display: flex;
+  }
+  
+  .portfolio_container img {
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+  }
+  
+  .portfolio_container p {
+    margin-top: 8%;
+    padding: 50px;
+    font-size: 28px;
+    text-align: justify;
+  }
+  
+  .portfolio_container p b {
+    font-size: 25px;
+  }
+  
+  .portfolio_heading1 {
+    text-align: center;
+    font-size: x-large;
+    margin: 35px;
+  }
+  
+  .portfolio_heading1 p {
+    font-size: 23px;
+    margin-left: 6%;
+    margin-right: 6%;
+    color: rgb(60, 60, 60);
+  }
+  
+  .portfolio_box {
+    margin: 10%;
+    margin-top: 5%;
+  }
+  
+  .portfolio_box1 {
+    background-image: url("https://razorrank.com/wp-content/uploads/2020/08/rr-web-design-camlaw-bg.jpg");
+    background-repeat: no-repeat;
+    height: 360px;
+    margin-bottom: 5%;
+  }
+  
+  .portfolio_box2 {
+    background-image: url("https://razorrank.com/wp-content/uploads/2020/08/rr-web-design-fsilver-bg.jpg");
+    background-repeat: no-repeat;
+    height: 360px;
+    margin-bottom: 5%;
+  }
+  
+  .portfolio_box3 {
+    background-image: url("https://razorrank.com/wp-content/uploads/2020/08/rr-web-design-ani-bg.jpg");
+    background-repeat: no-repeat;
+    height: 360px;
+    margin-bottom: 5%;
+  }
+  
+  .portfolio_box4 {
+    background-image: url("https://razorrank.com/wp-content/uploads/2020/08/rr-web-design-douglas-london-bg.jpg");
+    background-repeat: no-repeat;
+    height: 360px;
+    margin-bottom: 5%;
+  }
+  
+  .portfolio_left,
+  .portfolio_left1 {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    width: 250px;
+    height: 359px;
+    float: left;
+  }
+  
+  .portfolio_left1 {
+    float: right;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  
+  #portfolio_image,
+  #portfolio_image1 {
+    position: relative;
+    left: -20%;
+    top: 7%;
+    height: 315px;
+  }
+  
+  #portfolio_image1 {
+    left: 70%;
+  }
+  
+  .portfolio_right,
+  .portfolio_right1 {
+    transform: skew(-12deg);
+    width: 82px;
+    height: 82px;
+    position: absolute;
+    right: 17%;
+    margin-top: -24%;
+  }
+  
+  .portfolio_right1 {
+    right: 80%;
+    transform: skew(12deg);
+  }
+  
+  .portfolio_paragraph,
+  .portfolio_paragraph1 {
+    text-align: center;
+    margin-top: -230px;
+    padding-bottom: 80px;
+  }
+  
+  .portfolio_paragraph1 img {
+    margin-left: -28%;
+  }
+  
+  .portfolio_paragraph p,
+  .portfolio_paragraph1 p {
+    font-size: 20px;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    width: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 51%;
+  }
+  
+  .portfolio_paragraph1 p {
+    margin-left: 15%;
+  }
+  
+  .portfolio_heading2 {
+    color: rgb(47, 60, 69);
+    font-family: "Open Sans", sans-serif;
+    font-size: 23px;
+    text-align: center;
+    background-color: white;
+    padding: 10%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    box-shadow: 0px -10px 70px rgba(73, 92, 114, 0.5);
+  }
+  
+  .portfolio_heading2 h1 {
+    margin-left: 21%;
+    margin-bottom: 3%;
+    width: 60%;
+    font-weight: 800;
+  }
+  .portfolio_heading2 p {
+    color: rgb(52, 63, 70);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  
+  .portfolio_heading3 {
+    text-align: center;
+    background-color: rgba(23, 95, 150, 0.986);
+    color: white;
+    padding: 60px;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .portfolio_heading3 h1 {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .portfolio_heading3 p {
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .portfolio_heading3 b {
+    font-size: 18px;
+  }
+  
+  .portfolio_heading3 a {
+    font-size: 17px;
+    background-color: #3696eb;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .portfolio_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .portfolio_links a {
+    margin: 50px;
+  }
+  
+  .portfolio_Footer {
+    background-color: #174b74;
+    background-size: cover;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .portfolio_Footer h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .portfolio_menu_items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 50px);
+  }
+  
+  .portfolio_Footer a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 20px;
+  }
+
+  .portfolio_Footer i{
+    font-size: 30px;
+  }
+  
+  .portfolio_Footer a:nth-last-child(-n + 2) {
+    grid-row: span 2;
+  }
+  
+  .portfolio_footer1 {
+    background-color: rgb(50, 49, 49);
+    padding-top: 23px;
+    padding-bottom: 23px;
+    color: white;
+  }
+  
+  .portfolio_footer1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    padding-left: 10.3%;
+  }
+  
+  .portfolio_footer1 b {
+    font-size: 17px;
+    padding-left: 40%;
+    padding-right: 4%;
+  }
+  
