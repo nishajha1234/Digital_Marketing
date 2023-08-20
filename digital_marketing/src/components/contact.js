@@ -1,39 +1,62 @@
 import "../styles/contact.css";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [website, setWebsite] = useState("");
+  const [message, setMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+
   const handleSubmit = (event) => {
-    const form = document.getElementById("inquiry-form");
     event.preventDefault();
-    document.getElementById("contact_name").value = "";
-    document.getElementById("contact_phone").value = "";
-    document.getElementById("contact_email").value = "";
-    document.getElementById("contact_company").value = "";
-    document.getElementById("contact_website").value = "";
-    document.getElementById("contact_message").value = "";
+    const reqData = {
+      name,
+      phone,
+      email,
+      company,
+      website,
+      message,
+    };
+    axios
+      .post("http://localhost:8000/contact", reqData)
+      .then((response) => {
+        console.log(response);
+        setName("");
+        setPhone("");
+        setEmail("");
+        setCompany("");
+        setWebsite("");
+        setMessage("");
+        setShowPopup(true);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   };
   return (
     <div className="contact_App">
       <div className="contact_background">
         <nav className="contact_navbar">
-          <i className="fa-solid fa-dove fa"></i>
-          <b>MARKET WINGS</b>
-          <ul className="contact_nav-links">
-            <li>
-              <a href="Main_page.html">Home</a>
-            </li>
-            <li>
-              <a href="About.html">About</a>
-            </li>
-            <li>
-              <a href="Services.html">Services</a>
-            </li>
-            <li>
-              <a href="#home">Portfolio</a>
-            </li>
-            <li>
-              <a href="#services">Contact</a>
-            </li>
-          </ul>
+          <div className="contact_nav-left">
+            <i className="fa-solid fa-dove fa"></i>
+            <b>MARKET WINGS</b>
+          </div>
+          <div className="contact_nav-links">
+            <Link to="/">Home</Link>
+
+            <Link to="/about">About</Link>
+
+            <Link to="/services">Services</Link>
+
+            <Link to="/portfolio">Portfolio</Link>
+
+            <Link to="/contact">Contact</Link>
+          </div>
         </nav>
         <div className="contact_main_heading">
           <h1>Let’s Work Together</h1>
@@ -61,32 +84,74 @@ function Contact() {
             type="text"
             id="contact_name"
             placeholder="Full Name"
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
             required
           />
-          <input type="text" id="contact_phone" placeholder="Phone" required />
-          <input type="email" id="contact_email" placeholder="Email" required />
+          <input
+            type="text"
+            id="contact_phone"
+            placeholder="Phone"
+            value={phone}
+            onChange={(event) => {
+              setPhone(event.target.value);
+            }}
+            required
+          />
+          <input
+            type="email"
+            id="contact_email"
+            placeholder="Email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+            required
+          />
           <input
             type="text"
             id="contact_company"
             placeholder="Company"
+            value={company}
+            onChange={(event) => {
+              setCompany(event.target.value);
+            }}
             required
           />
           <input
             type="text"
             id="contact_website"
             placeholder="Website"
+            value={website}
+            onChange={(event) => {
+              setWebsite(event.target.value);
+            }}
             required
           />
           <textarea
             id="contact_message"
             placeholder="Message"
             rows="5"
+            value={message}
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
             required
           />
           <button type="submit" id="contact_submit">
             Submit
           </button>
         </form>
+        {showPopup && (
+          <div className="contact_popup">
+            <p>Your request has been submitted successfully!</p>
+            <button onClick={() => setShowPopup(false)}>
+              <i class="fa-solid fa-xmark fa-xl"></i>
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="contact_links">
@@ -103,35 +168,28 @@ function Contact() {
 
       <div className="contact_Footer">
         <h1>
-          {" "}
           <i className="fa-solid fa-dove fa"></i> MARKET WINGS
         </h1>
-        <div className="contact_menu_items">
-          <a href="#">About Us</a>
-          <a href="">Investors</a>
-          <a href="">Blog</a>
+        <div className="home_menu_items">
+          <Link to="/about">About Us</Link>
           <a href="https://www.facebook.com/">
-            <i className="fa-brands fa-facebook lg"></i>
+            <i className="fa-brands fa-facebook"></i>
           </a>
-          <a href="https://twitter.com/i/flow/login">
-            <i className="fa-brands fa-twitter"></i>
-          </a>
-          <a href="">Carrers</a>
-          <a href="">Partners</a>
-          <a href="">News</a>
+          <Link to="/contact">Contact</Link>
           <a href="https://www.linkedin.com/">
             <i className="fa-brands fa-linkedin"></i>
           </a>
+          <Link to="/services">Services</Link>
+          <a href="https://twitter.com/i/flow/login">
+            <i className="fa-brands fa-twitter"></i>
+          </a>
+          <Link to="/site_map">Site Map</Link>
           <a href="https://www.youtube.com/">
             <i className="fa-brands fa-youtube"></i>
           </a>
-          <a href="#">Contact</a>
-          <a href="#">Press Releases</a>
-          <a href="">Office Locations</a>
         </div>
       </div>
       <div className="contact_footer1">
-        <a href="">Site Map</a>{" "}
         <b>
           ©2023 Copyright by MARKET WINGS, LLC. All rights reserved to site
           content
