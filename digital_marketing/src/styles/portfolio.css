@@ -236,7 +236,7 @@
 
 .portfolio_heading2 h1 {
   text-align: center;
-  margin: auto;
+  margin: 3%;
   font-weight: 800;
 }
 .portfolio_heading2 p {
@@ -245,6 +245,7 @@
   line-height: 28px;
   font-weight: 400;
   text-align: justify;
+  margin: 20px;
 }
 
 .portfolio_heading3 {

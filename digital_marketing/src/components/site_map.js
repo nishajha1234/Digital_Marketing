@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/site_map.css";
 import { Link } from "react-router-dom";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-const apiKey = "AIzaSyBu2JuDIvykNFjr-BKCDlyzvaAAZ3mENsQ";
+const apiKey = "Write your API KEY";
 
 const mapStyles = {
   width: "50%",
