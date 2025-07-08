@@ -1,0 +1,382 @@
+* {
+  margin: 0%;
+}
+.home_App {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f8fa;
+}
+
+.home_header {
+  background-color: white;
+  box-shadow: 5px 5px 20px rgb(68, 66, 66);
+}
+
+.home_background {
+  background-image: url("https://c1.wallpaperflare.com/preview/825/533/293/agency-business-cafe-contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.home_background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 30, 0.5);
+  z-index: -1;
+}
+
+.home_navbar {
+  background-color: rgba(22, 22, 118, 0.348);
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_navbar i {
+  font-size: 35px;
+  margin-right: 8px;
+}
+
+.home_navbar b {
+  font-size: 30px;
+}
+
+.home_nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.home_nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.home_nav-links a:hover {
+  text-decoration: underline;
+}
+
+.home_main_heading {
+  color: white;
+  text-align: left;
+  padding: 5vw;
+  margin-top: 10vh;
+  margin-bottom: 4vh;
+}
+
+.home_main_heading b {
+  font-size: 4.5vw;
+  display: block;
+  max-width: 90%;
+  line-height: 1.2;
+}
+
+.home_main_heading p {
+  font-size: 2.5vw;
+  display: block;
+  max-width: 90%;
+  padding-top: 15px;
+  line-height: 1.5;
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .home_main_heading b {
+    font-size: 7vw;
+  }
+
+  .home_main_heading p {
+    font-size: 4vw;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .home_main_heading b {
+    font-size: 5vw;
+  }
+
+  .home_main_heading p {
+    font-size: 3vw;
+  }
+}
+
+/* Large screens (laptops & desktops) */
+@media (min-width: 1025px) {
+  .home_main_heading b {
+    font-size: 70px;
+    max-width: 1000px;
+  }
+
+  .home_main_heading p {
+    font-size: 30px;
+    max-width: 1000px;
+  }
+}
+
+
+@media (max-width: 930px) {
+  .home_navbar {
+    flex-direction: column;
+  }
+  .home_nav-links {
+    flex-direction: column;
+  }
+  .home_nav-links a {
+    display: block;
+    padding: 15px;
+    margin: auto;
+  }
+}
+
+.home_heading {
+  background-color: rgba(6, 147, 227, 1);
+  height: fit-content;
+  text-align: center;
+  padding: 30px;
+  color: white;
+}
+
+.home_heading h1 {
+  font-size: 50px;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home_heading p {
+  font-size: 31px;
+  width: 65vw;
+  margin: auto;
+  margin-bottom: 17px;
+}
+
+.home_heading1,
+.home_heading2,
+.home_heading3 {
+  font-size: 30px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.home_images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.home_images img {
+  width: 200px;
+  height: 80px;
+  margin: 50px;
+}
+
+.home_gray {
+  filter: grayscale(100%);
+  transition: filter(0.3s);
+}
+
+.home_gray:hover {
+  filter: grayscale(0%);
+}
+
+.home_heading2 {
+  margin-top: 130px;
+  margin-bottom: 100px;
+}
+
+.home_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home_box {
+  padding: 30px;
+  width: 500px;
+  height: 350px;
+  background-color: #2377b4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 2px;
+  text-align: center;
+}
+
+.home_box i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.home_box h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.home_content {
+  margin: 20px;
+  opacity: 0%;
+  transition: 0% ease;
+}
+
+.home_box:hover {
+  background-color: white;
+  color: #1886e6;
+}
+
+.home_box:hover h1 {
+  color: black;
+  margin-bottom: 30px;
+}
+
+.home_box:hover .home_content {
+  opacity: 100%;
+  text-align: center;
+}
+
+.home_box:hover .home_content {
+  color: black;
+}
+
+.home_heading3 h1 {
+  text-align: center;
+  margin: 50px;
+  padding-bottom: 70px;
+}
+
+.home_heading3 p {
+  margin-left: 16.5%;
+  margin-right: 16.5%;
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 5%;
+}
+
+.home_container1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.home_box1 {
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  color: black;
+  margin: 10px;
+  box-shadow: 5px 5px 20px rgb(68, 66, 66);
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .home_box {
+    width: 80%;
+  }
+  .home_heading3 h1 {
+    margin: auto;
+  }
+  .home_box1 {
+    width: 90%;
+  }
+}
+
+.home_box1 h1 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 35px;
+}
+
+.home_box1 img {
+  margin-bottom: 40px;
+}
+
+.home_links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.home_links a {
+  margin: 5px;
+}
+
+.home_Footer {
+  background-color: #174b74;
+  background-size: cover;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.home_Footer h1 {
+  padding-top: 20px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.home_menu_items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 50px);
+}
+
+.home_Footer a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.home_Footer i {
+  font-size: 25px;
+}
+
+.home_footer1 {
+  background-color: rgb(50, 49, 49);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  color: white;
+}
+
+.home_footer1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  padding-left: 10.3%;
+}
+
+.home_footer1 b {
+  font-size: 17px;
+  text-align: center;
+  padding: 20px;
+}
