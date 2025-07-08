@@ -33,7 +33,6 @@ function About() {
   return (
     <div className="about_App">
       <div className="about_background">
-        {/* NAVBAR */}
         <nav className="about_navbar">
           <div className="about_nav-left">
             <i className="fa-solid fa-dove fa"></i>
